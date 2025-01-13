@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel fluig-experimental-babel/workflow/src_scripts --out-dir fluig-experimental-babel/workflow/scripts"
+    "test": "mocha",
+    "build": "babel fluig-experimental-babel/workflow/src_scripts --out-dir fluig-experimental-babel/workflow/scripts && find fluig-experimental-babel/workflow/scripts -type f -name \"*.js\" -exec sed -i '/module\\.exports/,/};/d' {} +"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,8 @@
     "@babel/cli": "^7.26.4",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0"
+  },
+  "dependencies": {
+    "mocha": "^11.0.1"
   }
 }

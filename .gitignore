@@ -2,3 +2,4 @@
 /.metadata
 com.totvs.tds.ecm.dataservers
 /node_modules
+/fluig-experimental-babel/workflow/scripts

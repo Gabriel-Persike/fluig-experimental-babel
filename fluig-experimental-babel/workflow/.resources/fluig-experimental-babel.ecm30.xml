@@ -28,10 +28,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>fluig-experimental-babel</processId>
-      <version>1</version>
+      <version>14</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>0</formId>
+    <formId>389538</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
@@ -322,7 +322,7 @@
         <companyId>1</companyId>
         <processId>fluig-experimental-babel</processId>
         <expressionOrder>1</expressionOrder>
-        <version>1</version>
+        <version>14</version>
         <sequence>7</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -443,10 +443,20 @@
         <processId>fluig-experimental-babel</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function servicetask6(attempt, message) {
-	log.info(&quot;&quot;);
+      <eventDescription>&quot;use strict&quot;;
 
-}</eventDescription>
+function servicetask6(attempt, message) {
+  log.info(montaComentarioDoUsuarioParaInserirNoHistorico());
+}
+var montaComentarioDoUsuarioParaInserirNoHistorico = function montaComentarioDoUsuarioParaInserirNoHistorico() {
+  var user = hAPI.getCardValue(&quot;userId&quot;);
+  var comentario = hAPI.getCardValue(&quot;comentarioAprovador&quot;);
+  if (!user || !comentario) {
+    throw &quot;Usuário ou Comentario não informados&quot;;
+  }
+  return &quot;&quot;.concat(user, &quot;: &quot;).concat(comentario);
+};
+</eventDescription>
     </WorkflowProcessEvent>
   </list>
   <list/>
@@ -491,7 +501,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>fluig-experimental-babel</processId>
-        <version>1</version>
+        <version>14</version>
         <linkSequence>13</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -502,7 +512,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>fluig-experimental-babel</processId>
-        <version>1</version>
+        <version>14</version>
         <linkSequence>13</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -513,7 +523,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>fluig-experimental-babel</processId>
-        <version>1</version>
+        <version>14</version>
         <linkSequence>15</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -524,7 +534,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>fluig-experimental-babel</processId>
-        <version>1</version>
+        <version>14</version>
         <linkSequence>15</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
